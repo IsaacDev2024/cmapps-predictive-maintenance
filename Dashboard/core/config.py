@@ -3,6 +3,11 @@
 # Configuraciones centralizadas del Dashboard
 # ===============================================
 
+from pathlib import Path
+
+# Directorio base del Dashboard
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # 
 # PALETA DE COLORES
 # 
@@ -68,12 +73,12 @@ MODEL_CONFIG = {
 # 
 
 PATHS = {
-    'train_data': 'data/train_FD001.txt',
-    'csv_train': 'data/csv_train.csv',
-    'stationary_pickle': 'data/all_units_stationary.pkl',
-    'model_lstm': 'data/modelo/modelo_lstm_completo.keras',
-    'scaler_lstm': 'data/modelo/scaler_lstm.bin',
-    'history_lstm': 'data/modelo/historial_entrenamiento_lstm.pkl',
+    'train_data': str(BASE_DIR / 'data' / 'train_FD001.txt'),
+    'csv_train': str(BASE_DIR / 'data' / 'csv_train.csv'),
+    'stationary_pickle': str(BASE_DIR / 'data' / 'all_units_stationary.pkl'),
+    'model_lstm': str(BASE_DIR / 'data' / 'modelo' / 'modelo_lstm_completo.keras'),
+    'scaler_lstm': str(BASE_DIR / 'data' / 'modelo' / 'scaler_lstm.bin'),
+    'history_lstm': str(BASE_DIR / 'data' / 'modelo' / 'historial_entrenamiento_lstm.pkl'),
 }
 
 # 
