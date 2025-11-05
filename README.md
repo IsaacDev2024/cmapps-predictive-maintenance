@@ -12,6 +12,9 @@
 <img src="https://img.shields.io/badge/Status-Production-success" alt="Status">
 <img src="https://img.shields.io/badge/Maintained-Yes-brightgreen" alt="Maintained">
 
+### 🌐 **[Ver Dashboard en Vivo →](https://tu-dashboard.streamlit.app)**
+*(Actualizar con tu URL después del despliegue)*
+
 ---
 
 ### **Desarrollado por**
