@@ -24,26 +24,29 @@ class View:
     def load_model(_self):
         """Carga el modelo LSTM entrenado"""
         try:
-            return keras.models.load_model('./data/modelo/modelo_lstm_completo.keras')
-        except:
+            return keras.models.load_model(config.PATHS['model_lstm'])
+        except Exception as e:
+            st.error(f"Error cargando modelo: {e}")
             return None
 
     @st.cache_data(show_spinner=False)
     def load_scaler(_self):
         """Carga el escalador utilizado en el preprocesamiento"""
         try:
-            return load("./data/modelo/scaler_lstm.bin")
-        except:
+            return load(config.PATHS['scaler_lstm'])
+        except Exception as e:
+            st.error(f"Error cargando escalador: {e}")
             return None
 
     @st.cache_data(show_spinner=False)
     def load_training_history(_self):
         """Carga el historial de entrenamiento"""
         try:
-            with open("./data/modelo/historial_entrenamiento_lstm.pkl", "rb") as f:
+            with open(config.PATHS['history_lstm'], "rb") as f:
                 history = pickle.load(f)
             return history
-        except:
+        except Exception as e:
+            st.error(f"Error cargando historial: {e}")
             return None
 
     def style_axes(self, ax):
