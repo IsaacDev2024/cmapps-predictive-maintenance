@@ -1,2 +1,0 @@
-# Paquetes del sistema necesarios para Streamlit Cloud
-# Este archivo es requerido por Streamlit Cloud para instalar dependencias del sistema
