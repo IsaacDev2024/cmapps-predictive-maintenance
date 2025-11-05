@@ -1,0 +1,17 @@
+# Configuración de Streamlit para el Dashboard
+
+[server]
+# Tamaño máximo de archivo de carga (en MB)
+maxUploadSize = 2
+
+[theme]
+# Opciones: "light" o "dark"
+# Cambia este valor para cambiar el tema de toda la aplicación
+base = "dark"
+
+# Colores personalizados del tema (opcional)
+primaryColor = "#667eea"
+backgroundColor = "#0e1117"
+secondaryBackgroundColor = "#262730"
+textColor = "#fafafa"
+
